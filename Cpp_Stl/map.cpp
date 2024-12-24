@@ -1,6 +1,7 @@
 #include <iostream>
 #include<map>
 #include<String>
+#include <unordered_map>
 using namespace std;
 int main(){
  map<int,string> data;
@@ -29,6 +30,22 @@ for(auto i = it;i!=data.end();i++){
 //     cout << "Found: " << it->second << endl;  // Accessing value
 // }
 
+
+
+unordered_map<int, string> umap;
+    
+    // Insert elements
+    umap[1] = "Alice";
+    umap[2] = "Bob";
+    umap[3] = "Charlie";
+
+    // Accessing elements
+    cout << "Key 2: " << umap[2] << endl;
+
+    // Iterating through unordered_map
+    for (const auto& pair : umap) {
+        cout << pair.first << ": " << pair.second << endl;
+    }
     return 0;
 
 }
